@@ -2,6 +2,7 @@
 import Schart from 'vue-schart'
 import { reactive } from 'vue'
 import imgurl from '../assets/img/logo.jpeg'
+import { formatDate } from '@/utils'
 
 const name = localStorage.getItem('ms_username')
 const role: string = name === 'admin' ? '超级管理员' : '普通用户'
@@ -93,11 +94,11 @@ const todoList = reactive([
           </div>
           <div class="user-info-list">
             上次登录时间：
-            <span>2022-10-01</span>
+            <span>{{ formatDate(new Date()) }}</span>
           </div>
           <div class="user-info-list">
             上次登录地点：
-            <span>东莞</span>
+            <span>杭州</span>
           </div>
         </el-card>
         <el-card shadow="hover" style="height: 252px">

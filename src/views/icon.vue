@@ -139,6 +139,25 @@ const list = computed(() => {
 <template>
   <div class="container">
     <h2>使用方法</h2>
+    <h3 mt8>
+      iconify icon
+    </h3>
+    <p mt4>
+      > 由unocss支持, 内置：@iconify-json/carbon
+    </p>
+    <a mt4 block href="https://icon-sets.iconify.design/carbon/" target="_blank">> icon 列表</a>
+    <p mt4>
+      > 使用方法：设置类名 icon-btn
+    </p>
+    <p mt4>
+      > 如:
+      <v-pre>
+        &lt;i icon-btn i-carbon-logo-github /&gt;
+      </v-pre>
+    </p>
+    <h3 mt10>
+      element icon
+    </h3>
     <p style="line-height: 50px">
       直接通过设置类名为 el-icon-lx-iconName 来使用即可。例如：（共{{ iconList.length }}个图标）
     </p>
