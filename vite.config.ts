@@ -16,6 +16,9 @@ export default defineConfig({
     }),
     Unocss(),
   ],
+  optimizeDeps: {
+    include: ['schart.js'],
+  },
   test: {
     include: ['test/**/*.test.ts'],
     environment: 'jsdom',

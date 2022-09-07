@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.26.3
   '@element-plus/icons-vue': ^2.0.9
+  '@iconify-json/carbon': ^1.1.7
   '@vitejs/plugin-vue': ^3.0.0
   '@vue/compiler-sfc': ^3.1.2
   axios: ^0.27.2
@@ -18,16 +19,19 @@ specifiers:
   vitest: ^0.23.1
   vue: ^3.2.37
   vue-router: ^4.1.3
+  vue-schart: ^2.0.0
   vue-tsc: ^0.38.4
 
 dependencies:
   '@element-plus/icons-vue': 2.0.9_vue@3.2.38
+  '@iconify-json/carbon': 1.1.7
   axios: 0.27.2
   element-plus: 2.2.16_vue@3.2.38
   less: 4.1.3
   pinia: 2.0.22_pj7ch6rmow6odq73xb5hfvge3q
   vue: 3.2.38
   vue-router: 4.1.5_vue@3.2.38
+  vue-schart: 2.0.0
 
 devDependencies:
   '@antfu/eslint-config': 0.26.3_yqf6kl63nyoq5megxukfnom5rm
@@ -276,9 +280,14 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/carbon/1.1.7:
+    resolution: {integrity: sha512-QULSpNWKaX4auIbjITDynfALdJYvOOy/xZb+aLOqCgvpBcmbz5tbqvow4r25FWtVsi4FHVpNQ8vyJZXsD1Hlxg==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: false
+
   /@iconify/types/1.1.0:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==}
-    dev: true
 
   /@iconify/utils/1.0.33:
     resolution: {integrity: sha512-vGeAqo7aGPxOQmGdVoXFUOuyN+0V7Lcrx2EvaiRjxUD1x6Om0Tvq2bdm7E24l2Pz++4S0mWMCVFXe/17EtKImQ==}
@@ -3181,6 +3190,10 @@ packages:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     optional: true
 
+  /schart.js/3.0.4:
+    resolution: {integrity: sha512-uylb2u9rrHX1jyAuSAJUQON8XTfyDKI9kWj1J3fUlCQCkLVZ4HG4+IiV8qm//Z71dqvLI78QZ/fCBw0reB22Zw==}
+    dev: false
+
   /scule/0.3.2:
     resolution: {integrity: sha512-zIvPdjOH8fv8CgrPT5eqtxHQXmPNnV/vHJYffZhE43KZkvULvpCTvOt1HPlFaCZx287INL9qaqrZg34e8NgI4g==}
     dev: true
@@ -3732,6 +3745,12 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.2.1
       vue: 3.2.38
+    dev: false
+
+  /vue-schart/2.0.0:
+    resolution: {integrity: sha512-qAu3e5wfMcq26wK1xeHExEWfGpnjfoN1R/9QXblNi+AsU/p52X7tTwhi+Fw7H/otfEufhEY2X7z7emaoF4QO+g==}
+    dependencies:
+      schart.js: 3.0.4
     dev: false
 
   /vue-tsc/0.38.9_typescript@4.8.2:

@@ -47,6 +47,15 @@ const handleCommand = (command: string) => {
     </div>
     <div class="header-right">
       <div class="header-user-con">
+        <!-- GitHub -->
+        <a
+          icon-btn i-carbon-logo-github
+          mr4
+          c-white
+          href="https://github.com/ChpShy/vue-manage-template"
+          target="_blank"
+          title="GitHub"
+        />
         <!-- 消息中心 -->
         <div class="btn-bell" @click="router.push('/tabs')">
           <el-tooltip
@@ -70,9 +79,9 @@ const handleCommand = (command: string) => {
           </span>
           <template #dropdown>
             <el-dropdown-menu>
-              <a href="https://github.com/lin-xin/vue-manage-system" target="_blank">
+              <!-- <a href="https://github.com/lin-xin/vue-manage-system" target="_blank">
                 <el-dropdown-item>项目仓库</el-dropdown-item>
-              </a>
+              </a> -->
               <el-dropdown-item command="user">
                 个人中心
               </el-dropdown-item>
