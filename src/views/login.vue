@@ -56,36 +56,45 @@ tags.clearTags()
 <template>
   <div class="login-wrap">
     <div class="ms-login">
-      <img class="left-img" src="https://source.unsplash.com/collection/94734566/1920x1080" alt="">
-      <el-form ref="login" :model="param" :rules="rules" label-width="0px" class="ms-content">
-        <el-form-item prop="username">
-          <el-input v-model="param.username" placeholder="username">
-            <template #prepend>
-              <el-button :icon="User" />
-            </template>
-          </el-input>
-        </el-form-item>
-        <el-form-item prop="password">
-          <el-input
-            v-model="param.password"
-            type="password"
-            placeholder="password"
-            @keyup.enter="submitForm(login)"
-          >
-            <template #prepend>
-              <el-button :icon="Lock" />
-            </template>
-          </el-input>
-        </el-form-item>
-        <div class="login-btn">
-          <el-button type="primary" @click="submitForm(login)">
-            登录
-          </el-button>
+      <div class="login-box">
+        <div class="left-img">
+          <img class="img" src="../assets/img/bg.jpeg" alt="">
         </div>
-        <p class="login-tips">
-          Tips : 用户名和密码随便填。
-        </p>
-      </el-form>
+        <div class="right-form">
+          <el-form ref="login" :model="param" :rules="rules" label-width="0px" class="ms-content">
+            <el-form-item prop="username">
+              <el-input v-model="param.username" placeholder="username">
+                <template #prepend>
+                  <el-button :icon="User" />
+                </template>
+              </el-input>
+            </el-form-item>
+            <el-form-item prop="password">
+              <el-input
+                v-model="param.password"
+                type="password"
+                placeholder="password"
+                @keyup.enter="submitForm(login)"
+              >
+                <template #prepend>
+                  <el-button :icon="Lock" />
+                </template>
+              </el-input>
+            </el-form-item>
+            <div class="login-btn">
+              <el-button type="primary" @click="submitForm(login)">
+                登录
+              </el-button>
+            </div>
+            <p class="login-tips">
+              Tips : 用户名和密码随便填。
+            </p>
+          </el-form>
+          <div class="tips">
+            High后台管理系统
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -101,14 +110,52 @@ tags.clearTags()
 .ms-login {
 	display: flex;
 	margin: 0 auto;
-	width: 800px;
+  align-items: center;
+	width: 700px;
+  height: 100vh;
 	border-radius: 5px;
-	background: #F3FBFE;
 	overflow: hidden;
+  .login-box {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+  }
 	.left-img {
-		width: 400px;
+    position: relative;
+    flex: 1;
 		height: 400px;
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+      z-index: 1;
+    }
 	}
+  .right-form {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background: #F3FBFE;
+    .tips {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      color: #666;
+    }
+  }
 }
 .ms-content {
 	padding: 30px 30px;
