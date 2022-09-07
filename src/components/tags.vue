@@ -16,7 +16,7 @@ const closeTags = (index: number) => {
   const item = tags.list[index] ? tags.list[index] : tags.list[index - 1]
   if (item)
     delItem.path === route.fullPath && router.push(item.path)
-	 else
+  else
     router.push('/')
 }
 

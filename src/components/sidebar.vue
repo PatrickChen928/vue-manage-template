@@ -126,7 +126,7 @@ const sidebar = useSidebarStore()
                   {{ threeItem.title }}
                 </el-menu-item>
               </el-sub-menu>
-              <el-menu-item v-else v-permiss="item.permiss" :index="subItem.index">
+              <el-menu-item v-else :key="subItem.title" v-permiss="item.permiss" :index="subItem.index">
                 {{ subItem.title }}
               </el-menu-item>
             </template>

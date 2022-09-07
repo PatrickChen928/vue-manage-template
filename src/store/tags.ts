@@ -39,9 +39,9 @@ export const useTagsStore = defineStore('tags', {
         if (item.path === data.$route.fullPath) {
           if (i < len - 1)
             data.$router.push(this.list[i + 1].path)
-					 else if (i > 0)
+          else if (i > 0)
             data.$router.push(this.list[i - 1].path)
-					 else
+          else
             data.$router.push('/')
 
           this.list.splice(i, 1)
