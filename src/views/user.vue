@@ -1,6 +1,5 @@
 <script setup lang="ts" name="user">
 import { reactive, ref } from 'vue'
-import 'cropperjs/dist/cropper.css'
 import avatar from '../assets/img/logo.jpeg'
 
 const name = localStorage.getItem('ms_username')
