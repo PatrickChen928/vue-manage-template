@@ -1,6 +1,5 @@
 <script setup lang="ts" name="user">
 import { reactive, ref } from 'vue'
-import VueCropper from 'vue-cropperjs'
 import 'cropperjs/dist/cropper.css'
 import avatar from '../assets/img/logo.jpeg'
 
@@ -102,25 +101,6 @@ const saveAvatar = () => {
         </el-card>
       </el-col>
     </el-row>
-    <el-dialog v-model="dialogVisible" title="裁剪图片" width="600px">
-      <VueCropper
-        ref="cropper"
-        :src="imgSrc"
-        :ready="cropImage"
-        :zoom="cropImage"
-        :cropmove="cropImage"
-        style="width: 100%; height: 400px"
-      />
-
-      <template #footer>
-        <span class="dialog-footer">
-          <el-button class="crop-demo-btn" type="primary">选择图片
-            <input class="crop-input" type="file" name="image" accept="image/*" @change="setImage">
-          </el-button>
-          <el-button type="primary" @click="saveAvatar">上传并保存</el-button>
-        </span>
-      </template>
-    </el-dialog>
   </div>
 </template>
 
